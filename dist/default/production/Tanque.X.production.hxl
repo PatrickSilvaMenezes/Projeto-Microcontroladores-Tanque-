@@ -1,31 +1,31 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- dist/default/production\Tanque_.X.production.hex
- -Odist/default/production\Tanque_.X.production.hex
- -logfile=dist/default/production\Tanque_.X.production.hxl
+ dist/default/production\Tanque.X.production.hex
+ -Odist/default/production\Tanque.X.production.hex
+ -logfile=dist/default/production\Tanque.X.production.hxl
  -addressing=1
  -break=300000
 
 ### Memory Usage ###
  Intel Hex-file ranges:
-  0h - 3h		(dist/default/production\Tanque_.X.production.hex)
-  800h - 85Ch		(dist/default/production\Tanque_.X.production.hex)
-  85Eh - 3A34h		(dist/default/production\Tanque_.X.production.hex)
-  3A36h - 3A3Dh		(dist/default/production\Tanque_.X.production.hex)
-  200000h - 200007h		(dist/default/production\Tanque_.X.production.hex)
-  300000h - 30000Dh		(dist/default/production\Tanque_.X.production.hex)
+  0h - 3h		(dist/default/production\Tanque.X.production.hex)
+  800h - 85Ch		(dist/default/production\Tanque.X.production.hex)
+  85Eh - 3A3Ch		(dist/default/production\Tanque.X.production.hex)
+  3A3Eh - 3A45h		(dist/default/production\Tanque.X.production.hex)
+  200000h - 200007h		(dist/default/production\Tanque.X.production.hex)
+  300000h - 30000Dh		(dist/default/production\Tanque.X.production.hex)
  Unused ranges:
   4h - 7FFh
   85Dh - 85Dh
-  3A35h - 3A35h
-  3A3Eh - 1FFFFFh
+  3A3Dh - 3A3Dh
+  3A46h - 1FFFFFh
   200008h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Intel Hex-file         (dist/default/production\Tanque_.X.production.hex)
+  H1 = Intel Hex-file         (dist/default/production\Tanque.X.production.hex)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -834,7 +834,8 @@
 00003A00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003A10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003A20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003A30 | H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00003A30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1
+00003A40 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------

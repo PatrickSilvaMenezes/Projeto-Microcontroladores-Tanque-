@@ -7,7 +7,12 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "tanque.c" 2
-# 10 "tanque.c"
+
+
+
+
+
+
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 1 3
 
 
@@ -171,7 +176,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 10 "tanque.c" 2
+# 7 "tanque.c" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 1 3
 # 21 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdlib.h" 3
@@ -236,7 +241,7 @@ typedef struct { unsigned int quot, rem; } udiv_t;
 typedef struct { unsigned long quot, rem; } uldiv_t;
 udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
-# 11 "tanque.c" 2
+# 8 "tanque.c" 2
 
 # 1 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 3
@@ -5855,7 +5860,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\\pic\\include\\xc.h" 2 3
-# 12 "tanque.c" 2
+# 9 "tanque.c" 2
 
 # 1 "./lcd.h" 1
 # 23 "./lcd.h"
@@ -5938,7 +5943,7 @@ void Inicializa_LCD (void){
       _delay((unsigned long)((5)*(8000000/4000.0)));
     }
 }
-# 13 "tanque.c" 2
+# 10 "tanque.c" 2
 
 # 1 "./config.h" 1
 #pragma config PWRT = OFF
@@ -5991,7 +5996,7 @@ void Inicializa_LCD (void){
 
 
 #pragma config EBTRB = OFF
-# 14 "tanque.c" 2
+# 11 "tanque.c" 2
 
 # 1 "./adc.h" 1
 
@@ -6016,14 +6021,14 @@ unsigned int Ler_ADC(void){
 
     return temp;
 }
-# 15 "tanque.c" 2
+# 12 "tanque.c" 2
 
-
-
+# 1 "./rotina.h" 1
+# 11 "./rotina.h"
 void printDisplayLCD(int line, int col, char* text){
     Posiciona_LCD(line,col);
     Escreve_LCD(text);
-    _delay((unsigned long)((100)*(4000000/4000.0)));
+    _delay((unsigned long)((100)*(8000000/4000.0)));
 }
 void turnon_coolerandheater() {
     PORTBbits.RB7 = 1;
@@ -6033,7 +6038,7 @@ void turnon_coolerandheater() {
     Comando_LCD(01);
     printDisplayLCD(1,1, "Misturando");
     printDisplayLCD(2,1, "e Aquecendo!");
-     _delay((unsigned long)((300)*(4000000/4000.0)));
+     _delay((unsigned long)((300)*(8000000/4000.0)));
 
 }
 void turnoff_coolerandheater(){
@@ -6063,6 +6068,7 @@ void potentiometer_temperature(){
         printDisplayLCD(2,1, temperatura_texto);
     }
 }
+# 13 "tanque.c" 2
 
 
 
@@ -6073,7 +6079,7 @@ void main()
 
     TRISB = 0b00011000;
     PORTB = 0b00011000;
-# 79 "tanque.c"
+# 31 "tanque.c"
     ADCON1 = 0x06;
 
     TRISD = 0;
@@ -6111,7 +6117,7 @@ void main()
             Comando_LCD(01);
             printDisplayLCD(1,1, "Esvaziando!");
             PORTEbits.RE0=1;
-             _delay((unsigned long)((600)*(4000000/4000.0)));
+            _delay((unsigned long)((600)*(4000000/4000.0)));
 
 
         }

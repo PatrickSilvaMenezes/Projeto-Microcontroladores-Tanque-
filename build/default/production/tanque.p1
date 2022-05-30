@@ -1068,8 +1068,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./adc.h: 22: }
 [e :UE 389 ]
 }
-"18 tanque.c
-[; ;tanque.c: 18: void printDisplayLCD(int line, int col, char* text){
+"11 ./rotina.h
+[; ;./rotina.h: 11: void printDisplayLCD(int line, int col, char* text){
 [v _printDisplayLCD `(v ~T0 @X0 1 ef3`i`i`*uc ]
 {
 [e :U _printDisplayLCD ]
@@ -1077,255 +1077,255 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _col `i ~T0 @X0 1 r2 ]
 [v _text `*uc ~T0 @X0 1 r3 ]
 [f ]
-"19
-[; ;tanque.c: 19:     Posiciona_LCD(line,col);
+"12
+[; ;./rotina.h: 12:     Posiciona_LCD(line,col);
 [e ( _Posiciona_LCD (2 , -> _line `uc -> _col `uc ]
-"20
-[; ;tanque.c: 20:     Escreve_LCD(text);
+"13
+[; ;./rotina.h: 13:     Escreve_LCD(text);
 [e ( _Escreve_LCD (1 -> _text `*uc ]
-"21
-[; ;tanque.c: 21:     _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"22
-[; ;tanque.c: 22: }
+"14
+[; ;./rotina.h: 14:     _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"15
+[; ;./rotina.h: 15: }
 [e :UE 393 ]
 }
-"23
-[; ;tanque.c: 23: void turnon_coolerandheater() {
+"16
+[; ;./rotina.h: 16: void turnon_coolerandheater() {
 [v _turnon_coolerandheater `(v ~T0 @X0 1 ef ]
 {
 [e :U _turnon_coolerandheater ]
 [f ]
-"24
-[; ;tanque.c: 24:     PORTBbits.RB7 = 1;
+"17
+[; ;./rotina.h: 17:     PORTBbits.RB7 = 1;
 [e = . . _PORTBbits 0 7 -> -> 1 `i `uc ]
-"25
-[; ;tanque.c: 25:     PORTC=0x00;
+"18
+[; ;./rotina.h: 18:     PORTC=0x00;
 [e = _PORTC -> -> 0 `i `uc ]
-"26
-[; ;tanque.c: 26:     PORTE=0b00000000;
+"19
+[; ;./rotina.h: 19:     PORTE=0b00000000;
 [e = _PORTE -> -> 0 `i `uc ]
-"27
-[; ;tanque.c: 27:     PORTCbits.RC2= 1;
+"20
+[; ;./rotina.h: 20:     PORTCbits.RC2= 1;
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"28
-[; ;tanque.c: 28:     Comando_LCD(01);
+"21
+[; ;./rotina.h: 21:     Comando_LCD(01);
 [e ( _Comando_LCD (1 -> -> 1 `i `uc ]
-"29
-[; ;tanque.c: 29:     printDisplayLCD(1,1, "Misturando");
+"22
+[; ;./rotina.h: 22:     printDisplayLCD(1,1, "Misturando");
 [e ( _printDisplayLCD (3 , , -> 1 `i -> 1 `i :s 1C ]
-"30
-[; ;tanque.c: 30:     printDisplayLCD(2,1, "e Aquecendo!");
+"23
+[; ;./rotina.h: 23:     printDisplayLCD(2,1, "e Aquecendo!");
 [e ( _printDisplayLCD (3 , , -> 2 `i -> 1 `i :s 2C ]
-"31
-[; ;tanque.c: 31:      _delay((unsigned long)((300)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"33
-[; ;tanque.c: 33: }
+"24
+[; ;./rotina.h: 24:      _delay((unsigned long)((300)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 300 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"26
+[; ;./rotina.h: 26: }
 [e :UE 394 ]
 }
-"34
-[; ;tanque.c: 34: void turnoff_coolerandheater(){
+"27
+[; ;./rotina.h: 27: void turnoff_coolerandheater(){
 [v _turnoff_coolerandheater `(v ~T0 @X0 1 ef ]
 {
 [e :U _turnoff_coolerandheater ]
 [f ]
-"35
-[; ;tanque.c: 35:     PORTCbits.RC2=0;
+"28
+[; ;./rotina.h: 28:     PORTCbits.RC2=0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"36
-[; ;tanque.c: 36:     PORTBbits.RB7 = 0;
+"29
+[; ;./rotina.h: 29:     PORTBbits.RB7 = 0;
 [e = . . _PORTBbits 0 7 -> -> 0 `i `uc ]
-"37
-[; ;tanque.c: 37: }
+"30
+[; ;./rotina.h: 30: }
 [e :UE 395 ]
 }
-"39
-[; ;tanque.c: 39: void potentiometer_temperature(){
+"32
+[; ;./rotina.h: 32: void potentiometer_temperature(){
 [v _potentiometer_temperature `(v ~T0 @X0 1 ef ]
 {
 [e :U _potentiometer_temperature ]
 [f ]
-"41
-[; ;tanque.c: 41:     float voltagem;
+"34
+[; ;./rotina.h: 34:     float voltagem;
 [v _voltagem `f ~T0 @X0 1 a ]
-"42
-[; ;tanque.c: 42:     float temperatura = 20;
+"35
+[; ;./rotina.h: 35:     float temperatura = 20;
 [v _temperatura `f ~T0 @X0 1 a ]
 [e = _temperatura -> -> 20 `i `f ]
-"43
-[; ;tanque.c: 43:     unsigned int digital;
+"36
+[; ;./rotina.h: 36:     unsigned int digital;
 [v _digital `ui ~T0 @X0 1 a ]
-"44
-[; ;tanque.c: 44:     char temperatura_texto[10];
+"37
+[; ;./rotina.h: 37:     char temperatura_texto[10];
 [v _temperatura_texto `uc ~T0 @X0 -> 10 `i a ]
-"45
-[; ;tanque.c: 45:     Comando_LCD (01);
+"38
+[; ;./rotina.h: 38:     Comando_LCD (01);
 [e ( _Comando_LCD (1 -> -> 1 `i `uc ]
-"46
-[; ;tanque.c: 46:     Inicializa_ADC();
+"39
+[; ;./rotina.h: 39:     Inicializa_ADC();
 [e ( _Inicializa_ADC ..  ]
-"47
-[; ;tanque.c: 47:     printDisplayLCD(1,1,"Temperatura:");
+"40
+[; ;./rotina.h: 40:     printDisplayLCD(1,1,"Temperatura:");
 [e ( _printDisplayLCD (3 , , -> 1 `i -> 1 `i :s 3C ]
-"48
-[; ;tanque.c: 48:     printDisplayLCD(2,8,"Celsius");
+"41
+[; ;./rotina.h: 41:     printDisplayLCD(2,8,"Celsius");
 [e ( _printDisplayLCD (3 , , -> 2 `i -> 8 `i :s 4C ]
-"51
-[; ;tanque.c: 51:     while(temperatura!=80){
+"44
+[; ;./rotina.h: 44:     while(temperatura!=80){
 [e $U 397  ]
 [e :U 398 ]
 {
-"52
-[; ;tanque.c: 52:         digital = Ler_ADC();
+"45
+[; ;./rotina.h: 45:         digital = Ler_ADC();
 [e = _digital ( _Ler_ADC ..  ]
-"53
-[; ;tanque.c: 53:         voltagem = digital*((float)5.00/(float)1023);
+"46
+[; ;./rotina.h: 46:         voltagem = digital*((float)5.00/(float)1023);
 [e = _voltagem * -> _digital `f / -> .5.00 `f -> -> 1023 `i `f ]
-"55
-[; ;tanque.c: 55:         temperatura = 12*voltagem+20;
+"48
+[; ;./rotina.h: 48:         temperatura = 12*voltagem+20;
 [e = _temperatura + * -> -> 12 `i `f _voltagem -> -> 20 `i `f ]
-"56
-[; ;tanque.c: 56:         sprintf(temperatura_texto,"%.2f",temperatura);
+"49
+[; ;./rotina.h: 49:         sprintf(temperatura_texto,"%.2f",temperatura);
 [e ( _sprintf (1 , (. , &U _temperatura_texto :s 5C -> _temperatura `d ]
-"58
-[; ;tanque.c: 58:         printDisplayLCD(2,1, temperatura_texto);
+"51
+[; ;./rotina.h: 51:         printDisplayLCD(2,1, temperatura_texto);
 [e ( _printDisplayLCD (3 , , -> 2 `i -> 1 `i &U _temperatura_texto ]
-"59
-[; ;tanque.c: 59:     }
+"52
+[; ;./rotina.h: 52:     }
 }
 [e :U 397 ]
-"51
-[; ;tanque.c: 51:     while(temperatura!=80){
+"44
+[; ;./rotina.h: 44:     while(temperatura!=80){
 [e $ != _temperatura -> -> 80 `i `f 398  ]
 [e :U 399 ]
-"60
-[; ;tanque.c: 60: }
+"53
+[; ;./rotina.h: 53: }
 [e :UE 396 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"65
-[; ;tanque.c: 65: void main()
+"17 tanque.c
+[; ;tanque.c: 17: void main()
 [v _main `(v ~T0 @X0 1 ef ]
-"66
-[; ;tanque.c: 66: {
+"18
+[; ;tanque.c: 18: {
 {
 [e :U _main ]
 [f ]
-"69
-[; ;tanque.c: 69:     TRISB = 0b00011000;
+"21
+[; ;tanque.c: 21:     TRISB = 0b00011000;
 [e = _TRISB -> -> 24 `i `uc ]
-"70
-[; ;tanque.c: 70:     PORTB = 0b00011000;
+"22
+[; ;tanque.c: 22:     PORTB = 0b00011000;
 [e = _PORTB -> -> 24 `i `uc ]
-"79
-[; ;tanque.c: 79:     ADCON1 = 0x06;
+"31
+[; ;tanque.c: 31:     ADCON1 = 0x06;
 [e = _ADCON1 -> -> 6 `i `uc ]
-"81
-[; ;tanque.c: 81:     TRISD = 0;
+"33
+[; ;tanque.c: 33:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"82
-[; ;tanque.c: 82:     TRISE = 0;
+"34
+[; ;tanque.c: 34:     TRISE = 0;
 [e = _TRISE -> -> 0 `i `uc ]
-"83
-[; ;tanque.c: 83:     PORTD = 0x00;
+"35
+[; ;tanque.c: 35:     PORTD = 0x00;
 [e = _PORTD -> -> 0 `i `uc ]
-"88
-[; ;tanque.c: 88:     TRISCbits.RC0=0;
+"40
+[; ;tanque.c: 40:     TRISCbits.RC0=0;
 [e = . . _TRISCbits 1 0 -> -> 0 `i `uc ]
-"89
-[; ;tanque.c: 89:     TRISEbits.RE0=0;
+"41
+[; ;tanque.c: 41:     TRISEbits.RE0=0;
 [e = . . _TRISEbits 1 0 -> -> 0 `i `uc ]
-"92
-[; ;tanque.c: 92:     TRISCbits.RC2=0;
+"44
+[; ;tanque.c: 44:     TRISCbits.RC2=0;
 [e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-"93
-[; ;tanque.c: 93:     PORTCbits.RC2=0;
+"45
+[; ;tanque.c: 45:     PORTCbits.RC2=0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"94
-[; ;tanque.c: 94:     TRISA=0;
+"46
+[; ;tanque.c: 46:     TRISA=0;
 [e = _TRISA -> -> 0 `i `uc ]
-"95
-[; ;tanque.c: 95:     TRISD=0;
+"47
+[; ;tanque.c: 47:     TRISD=0;
 [e = _TRISD -> -> 0 `i `uc ]
-"98
-[; ;tanque.c: 98:     PORTEbits.RE0=0;
+"50
+[; ;tanque.c: 50:     PORTEbits.RE0=0;
 [e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"99
-[; ;tanque.c: 99:     PORTCbits.RC0=1;
+"51
+[; ;tanque.c: 51:     PORTCbits.RC0=1;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"105
-[; ;tanque.c: 105:     Inicializa_LCD();
+"57
+[; ;tanque.c: 57:     Inicializa_LCD();
 [e ( _Inicializa_LCD ..  ]
-"107
-[; ;tanque.c: 107:     while(1) {
+"59
+[; ;tanque.c: 59:     while(1) {
 [e :U 402 ]
 {
-"108
-[; ;tanque.c: 108:         if (PORTBbits.RB4==0){
+"60
+[; ;tanque.c: 60:         if (PORTBbits.RB4==0){
 [e $ ! == -> . . _PORTBbits 0 4 `i -> 0 `i 404  ]
 {
-"109
-[; ;tanque.c: 109:             turnon_coolerandheater();
+"61
+[; ;tanque.c: 61:             turnon_coolerandheater();
 [e ( _turnon_coolerandheater ..  ]
-"110
-[; ;tanque.c: 110:             potentiometer_temperature();
+"62
+[; ;tanque.c: 62:             potentiometer_temperature();
 [e ( _potentiometer_temperature ..  ]
-"111
-[; ;tanque.c: 111:             turnoff_coolerandheater();
+"63
+[; ;tanque.c: 63:             turnoff_coolerandheater();
 [e ( _turnoff_coolerandheater ..  ]
-"112
-[; ;tanque.c: 112:             _delay((unsigned long)((200)*(4000000/4000.0)));
+"64
+[; ;tanque.c: 64:             _delay((unsigned long)((200)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"113
-[; ;tanque.c: 113:             Comando_LCD(01);
+"65
+[; ;tanque.c: 65:             Comando_LCD(01);
 [e ( _Comando_LCD (1 -> -> 1 `i `uc ]
-"114
-[; ;tanque.c: 114:             printDisplayLCD(1,1, "Esvaziando!");
+"66
+[; ;tanque.c: 66:             printDisplayLCD(1,1, "Esvaziando!");
 [e ( _printDisplayLCD (3 , , -> 1 `i -> 1 `i :s 6C ]
-"115
-[; ;tanque.c: 115:             PORTEbits.RE0=1;
+"67
+[; ;tanque.c: 67:             PORTEbits.RE0=1;
 [e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-"116
-[; ;tanque.c: 116:              _delay((unsigned long)((600)*(4000000/4000.0)));
+"68
+[; ;tanque.c: 68:             _delay((unsigned long)((600)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 600 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"119
-[; ;tanque.c: 119:         }
+"71
+[; ;tanque.c: 71:         }
 }
 [e $U 405  ]
-"121
-[; ;tanque.c: 121:         else if (PORTBbits.RB3==1){
+"73
+[; ;tanque.c: 73:         else if (PORTBbits.RB3==1){
 [e :U 404 ]
 [e $ ! == -> . . _PORTBbits 0 3 `i -> 1 `i 406  ]
 {
-"122
-[; ;tanque.c: 122:             PORTEbits.RE0=0;
+"74
+[; ;tanque.c: 74:             PORTEbits.RE0=0;
 [e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"123
-[; ;tanque.c: 123:             Comando_LCD(01);
+"75
+[; ;tanque.c: 75:             Comando_LCD(01);
 [e ( _Comando_LCD (1 -> -> 1 `i `uc ]
-"124
-[; ;tanque.c: 124:             printDisplayLCD(1,1, "Enchendo!");
+"76
+[; ;tanque.c: 76:             printDisplayLCD(1,1, "Enchendo!");
 [e ( _printDisplayLCD (3 , , -> 1 `i -> 1 `i :s 7C ]
-"125
-[; ;tanque.c: 125:             PORTCbits.RC0=1;
+"77
+[; ;tanque.c: 77:             PORTCbits.RC0=1;
 [e = . . _PORTCbits 0 0 -> -> 1 `i `uc ]
-"126
-[; ;tanque.c: 126:             _delay((unsigned long)((100)*(4000000/4000.0)));
+"78
+[; ;tanque.c: 78:             _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"127
-[; ;tanque.c: 127:         }
+"79
+[; ;tanque.c: 79:         }
 }
 [e :U 406 ]
 [e :U 405 ]
-"128
-[; ;tanque.c: 128:     }
+"80
+[; ;tanque.c: 80:     }
 }
 [e :U 401 ]
 [e $U 402  ]
 [e :U 403 ]
-"129
-[; ;tanque.c: 129: }
+"81
+[; ;tanque.c: 81: }
 [e :UE 400 ]
 }
 [p f _sprintf 8462336 ]

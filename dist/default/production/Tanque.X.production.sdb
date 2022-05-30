@@ -3,11 +3,11 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"4 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X/adc.h
+"4 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/adc.h
 [v _Inicializa_ADC Inicializa_ADC `(v  1 e 1 0 ]
 "13
 [v _Ler_ADC Ler_ADC `(ui  1 e 2 0 ]
-"23 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X/lcd.h
+"23 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/lcd.h
 [v _Comando_LCD Comando_LCD `(v  1 e 1 0 ]
 "37
 [v _Posiciona_LCD Posiciona_LCD `(v  1 e 1 0 ]
@@ -17,6 +17,14 @@
 [v _Escreve_LCD Escreve_LCD `(v  1 e 1 0 ]
 "85
 [v _Inicializa_LCD Inicializa_LCD `(v  1 e 1 0 ]
+"11 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/rotina.h
+[v _printDisplayLCD printDisplayLCD `(v  1 e 1 0 ]
+"16
+[v _turnon_coolerandheater turnon_coolerandheater `(v  1 e 1 0 ]
+"27
+[v _turnoff_coolerandheater turnoff_coolerandheater `(v  1 e 1 0 ]
+"32
+[v _potentiometer_temperature potentiometer_temperature `(v  1 e 1 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\atoi.c
@@ -91,15 +99,7 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"18 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X\tanque.c
-[v _printDisplayLCD printDisplayLCD `(v  1 e 1 0 ]
-"23
-[v _turnon_coolerandheater turnon_coolerandheater `(v  1 e 1 0 ]
-"34
-[v _turnoff_coolerandheater turnoff_coolerandheater `(v  1 e 1 0 ]
-"39
-[v _potentiometer_temperature potentiometer_temperature `(v  1 e 1 0 ]
-"65
+"17 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X\tanque.c
 [v _main main `(v  1 e 1 0 ]
 "2454 C:/Program Files/Microchip/MPLABX/v6.00/packs/Microchip/PIC18Fxxxx_DFP/1.3.36/xc8\pic\include\proc\pic18f4550.h
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
@@ -303,33 +303,33 @@
 [v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-"65 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X\tanque.c
+"17 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X\tanque.c
 [v _main main `(v  1 e 1 0 ]
 {
-"129
+"81
 } 0
-"23
+"16 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/rotina.h
 [v _turnon_coolerandheater turnon_coolerandheater `(v  1 e 1 0 ]
 {
-"33
+"26
 } 0
-"34
+"27
 [v _turnoff_coolerandheater turnoff_coolerandheater `(v  1 e 1 0 ]
 {
-"37
+"30
 } 0
-"39
+"32
 [v _potentiometer_temperature potentiometer_temperature `(v  1 e 1 0 ]
 {
-"44
+"37
 [v potentiometer_temperature@temperatura_texto temperatura_texto `[10]uc  1 a 10 77 ]
-"42
+"35
 [v potentiometer_temperature@temperatura temperatura `f  1 a 4 93 ]
-"41
+"34
 [v potentiometer_temperature@voltagem voltagem `f  1 a 4 87 ]
-"43
+"36
 [v potentiometer_temperature@digital digital `ui  1 a 2 91 ]
-"60
+"53
 } 0
 "9 C:\Program Files\Microchip\xc8\v2.36\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -673,15 +673,15 @@
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
 "53
 } 0
-"18 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X\tanque.c
+"11 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/rotina.h
 [v _printDisplayLCD printDisplayLCD `(v  1 e 1 0 ]
 {
 [v printDisplayLCD@line line `i  1 p 2 7 ]
 [v printDisplayLCD@col col `i  1 p 2 9 ]
 [v printDisplayLCD@text text `*.35uc  1 p 2 11 ]
-"22
+"15
 } 0
-"37 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X/lcd.h
+"37 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/lcd.h
 [v _Posiciona_LCD Posiciona_LCD `(v  1 e 1 0 ]
 {
 [v Posiciona_LCD@linha linha `uc  1 a 1 wreg ]
@@ -722,7 +722,7 @@
 [v ___xxtofl@sign sign `uc  1 a 1 8 ]
 "44
 } 0
-"13 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X/adc.h
+"13 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/adc.h
 [v _Ler_ADC Ler_ADC `(ui  1 e 2 0 ]
 {
 "14
@@ -734,7 +734,7 @@
 {
 "10
 } 0
-"85 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque .X/lcd.h
+"85 D:\Pastas Importantes\Faculdade Patrick\7-PERIODO\MM\MBLAB Patrick's Projects\Tanque.X/lcd.h
 [v _Inicializa_LCD Inicializa_LCD `(v  1 e 1 0 ]
 {
 "86

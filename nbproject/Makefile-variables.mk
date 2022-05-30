@@ -6,5 +6,5 @@
 CND_BASEDIR=`pwd`
 # default configuration
 CND_ARTIFACT_DIR_default=dist/default/production
-CND_ARTIFACT_NAME_default=Tanque_.X.production.hex
-CND_ARTIFACT_PATH_default=dist/default/production/Tanque_.X.production.hex
+CND_ARTIFACT_NAME_default=Tanque.X.production.hex
+CND_ARTIFACT_PATH_default=dist/default/production/Tanque.X.production.hex
